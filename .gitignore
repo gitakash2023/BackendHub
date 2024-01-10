@@ -2,6 +2,6 @@
 node_modules/
 # Ignore environment configuration files
 .env
-# Ignore connection file
+
 
 package-lock.json
