@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors'); 
 const userRoutes = require('./routes/userRoute'); 
+const todoRoutes = require('./routes/todoRoutes');
 const app = express();
 const PORT = process.env.PORT || 10000;
 
@@ -13,7 +14,7 @@ require('./coneection/connection');
 
 app.use(express.json());
 app.use('/api/users', userRoutes);
-
+app.use('/api/todos', todoRoutes);
 app.get('/', (req, res) => {
     res.send('Hello, World!');
   });
