@@ -1,11 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors'); 
-const userRoutes = require('./routes/userRoute'); 
+
 const todoRoutes = require('./routes/todoRoutes');
-const foodItemRoutes = require('./routes/foodItemRoutes');
+const blogRoutes = require('./routes/blogRoutes');
+
+
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 50000;
 
 // Enable CORS for all routes
 app.use(cors());
@@ -14,9 +16,10 @@ app.use(cors());
 require('./coneection/connection');
 
 app.use(express.json());
-app.use('/api/users', userRoutes);
+
 app.use('/api/todos', todoRoutes);
-app.use('/api/fooditems', foodItemRoutes);
+app.use('/api/blogs', blogRoutes);
+
 app.get('/', (req, res) => {
     res.send('Hello, World!');
   });
