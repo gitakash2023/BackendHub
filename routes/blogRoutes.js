@@ -5,7 +5,7 @@ const router = express.Router();
 const Blog = require('../models/Blog');
 
 // Create a blog
-router.post('/create-blog', async (req, res) => {
+router.post('/createBlog', async (req, res) => {
   try {
     const { title} = req.body;
     const newBlog = new Blog({ title});
