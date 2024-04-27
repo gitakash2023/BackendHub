@@ -7,8 +7,8 @@ const Blog = require('../models/Blog');
 // Create a blog
 router.post('/create-blog', async (req, res) => {
   try {
-    const { title, content, category, image } = req.body;
-    const newBlog = new Blog({ title, content, category, image });
+    const { title} = req.body;
+    const newBlog = new Blog({ title});
     const savedBlog = await newBlog.save();
     res.status(201).json(savedBlog);
   } catch (error) {

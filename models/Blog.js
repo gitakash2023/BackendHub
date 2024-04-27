@@ -6,19 +6,19 @@ const blogSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
-  },
-  content: {
-    type: String,
-    required: true
-  },
-  category: {
-    type: String,
-    required: true
-  },
-  image: {
-    type: String, // Storing image URL
-    required: true
   }
+//   content: {
+//     type: String,
+//     required: true
+//   },
+//   category: {
+//     type: String,
+//     required: true
+//   },
+//   image: {
+//     type: String, // Storing image URL
+//     required: true
+//   }
 });
 
 const Blog = mongoose.model('Blog', blogSchema);
