@@ -16,7 +16,7 @@ const blogSchema = new mongoose.Schema({
     required: true
   },
   image: {
-    type: String, 
+    type: String, // Storing image URL
     required: true
   }
 });
