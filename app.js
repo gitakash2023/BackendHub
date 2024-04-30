@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors'); 
 
-const todoRoutes = require('./routes/todoRoutes');
 const blogRoutes = require('./routes/blogRoutes');
 const webStoryRoutes = require('./routes/webStoryRoutes')
 
@@ -18,7 +17,7 @@ require('./coneection/connection');
 
 app.use(express.json());
 
-app.use('/api/todos', todoRoutes);
+
 app.use('/api/blogs', blogRoutes);
 app.use('/api/webstories', webStoryRoutes);
 
