@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const todoRoutes = require('./routes/todoRoutes');
 const blogRoutes = require('./routes/blogRoutes');
+const webStoryRoutes = require('./routes/webStoryRoutes')
 
 
 const app = express();
@@ -19,6 +20,7 @@ app.use(express.json());
 
 app.use('/api/todos', todoRoutes);
 app.use('/api/blogs', blogRoutes);
+app.use('/api/webstories', webStoryRoutes);
 
 app.get('/', (req, res) => {
     res.send('Hello, World!');
